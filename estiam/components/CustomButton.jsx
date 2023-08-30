@@ -5,10 +5,9 @@ import React from 'react'
 export default function CustomButton(props) { 
 return (
     <Pressable onPress={props.onPress} 
-        style={()=>
-        props.outline 
-        ? [styles.btnFrame, styles.outline] :
-        styles.btnFrame
+        style={()=> props.outline 
+        ? [styles.btnFrame, styles.outline] 
+        : styles.btnFrame
     }>
         <Text style={styles.btnLabel}>{props.label}</Text>
     </Pressable>
