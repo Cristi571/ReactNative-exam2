@@ -74,13 +74,19 @@ const HomeStyles = StyleSheet.create({
         minHeight: 80,
     },
     cardTitle: {
-        fontSize: 18,
+        fontSize: 14,
         fontWeight: 'bold',
         color: '#fff',
+
+        borderWidth: 0,
+        borderColor: '#fff',
     },
     cardDetails: {
         width: '100%',
         color: '#2D9ECB',
+
+        borderWidth: 0,
+        borderColor: '#fff',
     },
 
 })

@@ -5,6 +5,7 @@ import { Image, Button } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { HomeScreen } from '../screens';
 import { ProfileScreen } from '../screens';
+import { QuestScreen } from '../screens';
 import Icon from 'react-native-vector-icons/Ionicons'; 
 
 const Tab = createBottomTabNavigator();

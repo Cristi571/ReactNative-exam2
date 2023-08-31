@@ -21,6 +21,7 @@ import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 // * @react-navigation/native-stack
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import { useNavigation } from '@react-navigation/native';
 // * react-native-screens
 // * react-native-safe-area-context
 // * @react-navigation/bottom-tabs
@@ -28,17 +29,14 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+    // const navigation = useNavigation();
 return (
 <View style={AppStyles.mainContainer}>
     <NavigationContainer>
-        <BottomTab
-        initialRouteName='Home'
-        screenOptions={{
-            headerTintColor: '#2278B6', // header title color
-            headerStyle: { backgroundColor: '#33B4D8' },
-        }}
-        >
+
         <Stack.Navigator>
+
+            <Stack.Screen name='BottomTab' component={BottomTab} options={{ unmountOnBlur: true, headerShown: false }} />
             <Stack.Screen name='Home' component={HomeScreen} style={ styles.def }
             options={{
                 headerRight: () => (
@@ -50,12 +48,13 @@ return (
                     />
                 )
             }} />
-            <Stack.Screen name='Login Screen' component={LoginScreen} />
-            <Stack.Screen name='Signup Screen' component={SignupScreen} />
-            <Stack.Screen name='Profile Screen' component={ProfileScreen} />
-            <Stack.Screen name='Quest Screen' component={QuestScreen} />
+            <Stack.Screen name='Login' component={LoginScreen} />
+            <Stack.Screen name='Signup' component={SignupScreen} />
+            <Stack.Screen name='Profile' component={ProfileScreen} />
+            <Stack.Screen name='Quest' component={QuestScreen} />
+        
         </Stack.Navigator> 
-        </BottomTab>
+
     </NavigationContainer>
 </View>
 );
